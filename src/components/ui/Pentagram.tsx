@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface PentagramProps {
@@ -36,7 +36,7 @@ export function Pentagram({
     L ${points[1][0]} ${points[1][1]}
     L ${points[3][0]} ${points[3][1]} Z`;
 
-  const pathVariants = {
+  const pathVariants: Variants = {
     hidden: {
       pathLength: 0,
       opacity: 0,
@@ -45,13 +45,13 @@ export function Pentagram({
       pathLength: 1,
       opacity: 1,
       transition: {
-        pathLength: { duration: 2, ease: "easeInOut" },
+        pathLength: { duration: 2, ease: "easeInOut" as const },
         opacity: { duration: 0.5 },
       },
     },
   };
 
-  const circleVariants = {
+  const circleVariants: Variants = {
     hidden: {
       pathLength: 0,
       opacity: 0,
@@ -60,7 +60,7 @@ export function Pentagram({
       pathLength: 1,
       opacity: 1,
       transition: {
-        pathLength: { duration: 1.5, ease: "easeInOut", delay: 0.5 },
+        pathLength: { duration: 1.5, ease: "easeInOut" as const, delay: 0.5 },
         opacity: { duration: 0.5, delay: 0.5 },
       },
     },
