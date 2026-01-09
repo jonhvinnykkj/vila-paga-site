@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm install:*)",
+      "Skill(frontend-design:frontend-design)",
+      "Bash(curl:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: Vila Paga - Site completo com design medieval mistico\n\n- Layout responsivo com Next.js 14 e Tailwind CSS\n- Animacoes magicas com Framer Motion\n- Componentes ornamentados: bordas medievais, divisores, botoes\n- Efeitos: runas flutuantes, campo de estrelas, circulo de feitico\n- Secoes: Hero, Welcome, Attractions, Events, Contact\n- Navbar ornamentada com runas e pentagrama\n- Tema floresta/dourado com tipografia Cinzel e Cormorant\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(gh repo create:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(npm run build:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
