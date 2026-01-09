@@ -1,0 +1,986 @@
+/* =============================================
+   VISITE - Santuário Místico Design
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+.visite-page {
+  --gold: #d4af37;
+  --gold-light: #e6c54a;
+  --gold-dark: #b8962e;
+  --green: #2e8b57;
+  --green-light: #3da86d;
+  --cream: #f5f5dc;
+  --text: #e8e8d0;
+  --text-muted: #a8a890;
+  --dark: #0a0a08;
+  --dark-alt: #121210;
+  --dark-card: #161614;
+  --red: #c0392b;
+  --orange: #d68910;
+
+  min-height: 100vh;
+  background: var(--dark);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--text);
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+
+.visite-hero {
+  position: relative;
+  padding: 10rem 2rem 6rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.visite-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(10,10,8,0.7) 0%, rgba(10,10,8,0.95) 100%),
+    url('/images/Imagem fachada da Vila.webp') center/cover no-repeat;
+}
+
+.visite-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.visite-hero-label {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.visite-hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing: 0.15em;
+  margin: 0 0 1rem;
+}
+
+.visite-hero p {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* =============================================
+   QUICK NAV
+   ============================================= */
+
+.visite-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  margin: -3rem auto 3rem;
+  max-width: 800px;
+  background: var(--dark-card);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.visite-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.visite-nav-item:hover {
+  color: var(--gold);
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.visite-nav-item svg {
+  width: 24px;
+  height: 24px;
+}
+
+.visite-nav-item span {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* =============================================
+   CONTENT & SECTIONS
+   ============================================= */
+
+.visite-content {
+  padding: 0 2rem 5rem;
+}
+
+.visite-content .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.visite-section {
+  margin-bottom: 5rem;
+  scroll-margin-top: 100px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.section-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 50%;
+  color: var(--gold);
+}
+
+.section-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.section-icon.dicas {
+  background: linear-gradient(135deg, rgba(46, 139, 87, 0.15) 0%, rgba(46, 139, 87, 0.05) 100%);
+  border-color: rgba(46, 139, 87, 0.3);
+  color: var(--green);
+}
+
+.section-icon.reservas {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.15) 0%, rgba(37, 211, 102, 0.05) 100%);
+  border-color: rgba(37, 211, 102, 0.3);
+  color: #25d366;
+}
+
+.section-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--cream);
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+.section-content .intro-text {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* =============================================
+   CONTATO CARDS
+   ============================================= */
+
+.contato-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.contato-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: var(--dark-card);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contato-card:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+.contato-card-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.contato-card-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.contato-card.whatsapp .contato-card-icon {
+  background: rgba(37, 211, 102, 0.15);
+  color: #25d366;
+}
+
+.contato-card.email .contato-card-icon {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--gold);
+}
+
+.contato-card.social .contato-card-icon {
+  background: rgba(66, 103, 178, 0.15);
+  color: #4267B2;
+}
+
+.contato-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contato-card-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.contato-card-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cream);
+}
+
+.contato-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* =============================================
+   TRANSPORTE
+   ============================================= */
+
+.transporte-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.transporte-card {
+  background: var(--dark-card);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.transporte-card:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.transporte-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.transporte-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.transporte-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.transporte-icon.aviao {
+  background: linear-gradient(135deg, #4a90d9 0%, #2c5aa0 100%);
+  color: white;
+}
+
+.transporte-icon.onibus {
+  background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+  color: white;
+}
+
+.transporte-icon.carro {
+  background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+  color: white;
+}
+
+.transporte-card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--cream);
+  margin: 0;
+}
+
+.transporte-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transporte-card li {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  position: relative;
+}
+
+.transporte-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+/* Aluguel Box */
+.aluguel-box {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(212, 175, 55, 0.02) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 2rem;
+}
+
+.aluguel-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: var(--gold);
+}
+
+.aluguel-header svg {
+  width: 24px;
+  height: 24px;
+}
+
+.aluguel-header h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.aluguel-box > p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.aluguel-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.aluguel-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  text-decoration: none;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+}
+
+.aluguel-links a:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: var(--gold);
+}
+
+/* =============================================
+   TAXAS
+   ============================================= */
+
+.aviso-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  background: rgba(214, 137, 16, 0.1);
+  border: 1px solid rgba(214, 137, 16, 0.3);
+  color: var(--orange);
+  font-size: 0.95rem;
+}
+
+.aviso-box svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.taxas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.taxa-card {
+  background: var(--dark-card);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  padding: 1.75rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.taxa-card:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.taxa-card.featured {
+  border-color: var(--gold);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, var(--dark-card) 100%);
+}
+
+.taxa-card-badge {
+  position: absolute;
+  top: -10px;
+  right: 1rem;
+  padding: 0.35rem 0.75rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--gold);
+  color: var(--dark);
+}
+
+.taxa-card-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  color: var(--gold);
+}
+
+.taxa-card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.taxa-card-icon.espiritual {
+  background: rgba(148, 103, 189, 0.15);
+  color: #9b59b6;
+}
+
+.taxa-card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--cream);
+  margin: 0 0 0.5rem;
+}
+
+.taxa-horario {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.taxa-preco {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.preco-valor {
+  font-family: 'Cinzel', serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.preco-info {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.taxa-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+.taxa-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.taxa-item:last-child {
+  border-bottom: none;
+}
+
+.taxa-item span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.taxa-item strong {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  color: var(--cream);
+}
+
+.taxa-item strong.gratuito {
+  color: var(--green);
+}
+
+.taxa-nota {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.taxa-obs {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.taxa-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.taxa-link:hover {
+  color: var(--gold-light);
+}
+
+.taxa-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Pagamento */
+.taxa-card.pagamento {
+  display: flex;
+  flex-direction: column;
+}
+
+.pagamento-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pix-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(135deg, #32BCAD 0%, #22867A 100%);
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.pix-badge span {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+.pagamento-info p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.pagamento-parcela {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--cream);
+}
+
+/* =============================================
+   REGRAS
+   ============================================= */
+
+.regras-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.regra-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--dark-card);
+  border-left: 4px solid;
+}
+
+.regra-card.proibido {
+  border-color: var(--red);
+}
+
+.regra-card.atencao {
+  border-color: var(--orange);
+}
+
+.regra-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.regra-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.regra-card.proibido .regra-icon {
+  color: var(--red);
+}
+
+.regra-card.atencao .regra-icon {
+  color: var(--orange);
+}
+
+.regra-card span {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* =============================================
+   DICAS
+   ============================================= */
+
+.dicas-section .section-header {
+  border-bottom-color: rgba(46, 139, 87, 0.2);
+}
+
+.dicas-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.dica-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  background: linear-gradient(135deg, rgba(46, 139, 87, 0.08) 0%, rgba(46, 139, 87, 0.02) 100%);
+  border: 1px solid rgba(46, 139, 87, 0.2);
+  transition: all 0.3s ease;
+}
+
+.dica-card:hover {
+  border-color: rgba(46, 139, 87, 0.4);
+  transform: translateY(-2px);
+}
+
+.dica-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(46, 139, 87, 0.15);
+  border-radius: 50%;
+  color: var(--green);
+}
+
+.dica-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.dica-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* =============================================
+   RESERVAS
+   ============================================= */
+
+.reservas-section .section-header {
+  border-bottom-color: rgba(37, 211, 102, 0.2);
+}
+
+.reserva-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.05) 0%, var(--dark-card) 100%);
+  border: 1px solid rgba(37, 211, 102, 0.2);
+}
+
+.reserva-info p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin: 0 0 1rem;
+}
+
+.reserva-destaque {
+  padding: 1.25rem;
+  background: rgba(37, 211, 102, 0.08);
+  border-left: 3px solid #25d366;
+}
+
+.reserva-destaque strong {
+  color: #25d366;
+}
+
+.reserva-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--cream);
+}
+
+.form-group label svg {
+  width: 18px;
+  height: 18px;
+  color: var(--text-muted);
+}
+
+.form-group input {
+  padding: 1rem 1.25rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  background: var(--dark);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #25d366;
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.1);
+}
+
+.btn-reserva {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2rem;
+  background: linear-gradient(135deg, #25d366 0%, #128C7E 100%);
+  color: white;
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-reserva:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-reserva svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* =============================================
+   RESPONSIVO
+   ============================================= */
+
+@media (max-width: 1100px) {
+  .taxas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dicas-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .contato-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .transporte-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reserva-box {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .visite-hero {
+    padding: 8rem 1.5rem 4rem;
+  }
+
+  .visite-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .visite-nav {
+    margin: -2rem 1rem 2rem;
+    padding: 1rem;
+    gap: 0.25rem;
+  }
+
+  .visite-nav-item {
+    padding: 0.75rem;
+  }
+
+  .visite-nav-item span {
+    display: none;
+  }
+
+  .visite-content {
+    padding: 0 1.5rem 3rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .taxas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .regras-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dicas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reserva-box {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .visite-hero h1 {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+  }
+
+  .visite-hero p {
+    font-size: 1rem;
+  }
+
+  .dicas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aluguel-links {
+    flex-direction: column;
+  }
+
+  .aluguel-links a {
+    text-align: center;
+    justify-content: center;
+  }
+}

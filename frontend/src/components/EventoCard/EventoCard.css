@@ -1,0 +1,621 @@
+/* =============================================
+   EVENTO CARD
+   Estilo clássico e elegante
+   ============================================= */
+
+.evento-card {
+  position: relative;
+  background: linear-gradient(145deg, #12120e 0%, #1a1a14 100%);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.evento-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.evento-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(212, 175, 55, 0.1);
+}
+
+.evento-card:hover::before {
+  opacity: 1;
+}
+
+/* Imagem */
+.evento-card-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.evento-card-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(18, 18, 14, 1) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.evento-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.evento-card:hover .evento-card-image img {
+  transform: scale(1.08);
+}
+
+/* Data no Card */
+.evento-card-date {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  z-index: 2;
+}
+
+.evento-card-date svg {
+  width: 14px;
+  height: 14px;
+  color: #d4af37;
+}
+
+.evento-card-date span {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #f5f5dc;
+  letter-spacing: 0.02em;
+}
+
+/* Conteúdo */
+.evento-card-content {
+  position: relative;
+  padding: 1.5rem 1.75rem 2rem;
+  margin-top: -2rem;
+  z-index: 1;
+}
+
+/* Título */
+.evento-card-content h3 {
+  color: #f5f5dc;
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.evento-card:hover .evento-card-content h3 {
+  color: #d4af37;
+}
+
+/* Excerpt */
+.evento-card-excerpt {
+  color: #a8a890;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+
+/* Botão Saiba Mais */
+.evento-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: #d4af37;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.evento-card-btn svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s ease;
+}
+
+.evento-card-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: #d4af37;
+}
+
+.evento-card-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* Decoração inferior */
+.evento-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1.75rem;
+  right: 1.75rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+}
+
+/* =============================================
+   MODAL
+   ============================================= */
+
+.evento-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 2rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.evento-modal {
+  position: relative;
+  background: linear-gradient(180deg, #1a1a14 0%, #0f0f0c 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar do Modal */
+.evento-modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.evento-modal::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.evento-modal::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.4);
+  border-radius: 3px;
+}
+
+.evento-modal::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
+
+/* Botão Fechar */
+.evento-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #f5f5dc;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.evento-modal-close:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+.evento-modal-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Imagem do Modal */
+.evento-modal-image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.evento-modal-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, #1a1a14 0%, transparent 100%);
+}
+
+.evento-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Conteúdo do Modal */
+.evento-modal-content {
+  padding: 2rem 2.5rem 2.5rem;
+  margin-top: -3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Data do Modal */
+.evento-modal-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 0.6rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.evento-modal-date svg {
+  width: 18px;
+  height: 18px;
+  color: #d4af37;
+}
+
+.evento-modal-date span {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #d4af37;
+  letter-spacing: 0.02em;
+}
+
+/* Título do Modal */
+.evento-modal-content h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #f5f5dc;
+  margin: 0 0 1.25rem;
+  line-height: 1.3;
+}
+
+/* Descrição do Modal */
+.evento-modal-desc {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #c8c8b8;
+  margin: 0 0 2rem;
+}
+
+/* Info Items */
+.evento-modal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  margin-bottom: 2rem;
+}
+
+.evento-modal-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.evento-modal-info-item svg {
+  width: 18px;
+  height: 18px;
+  color: #d4af37;
+  flex-shrink: 0;
+}
+
+.evento-modal-info-item span {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.9rem;
+  color: #a8a890;
+}
+
+/* Form */
+.evento-modal-form {
+  margin-bottom: 1.5rem;
+}
+
+.evento-modal-form label {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #d4af37;
+  margin-bottom: 0.5rem;
+}
+
+.evento-modal-form input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #f5f5dc;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.evento-modal-form input::placeholder {
+  color: #666;
+}
+
+.evento-modal-form input:focus {
+  outline: none;
+  border-color: #d4af37;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
+}
+
+/* Actions */
+.evento-modal-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.evento-modal-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #25d366;
+  border: none;
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.evento-modal-whatsapp svg {
+  width: 22px;
+  height: 22px;
+}
+
+.evento-modal-whatsapp:hover:not(.disabled) {
+  background: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+}
+
+.evento-modal-whatsapp.disabled {
+  background: #444;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* =============================================
+   RESPONSIVO
+   ============================================= */
+
+@media (max-width: 700px) {
+  .evento-card-image {
+    height: 180px;
+  }
+
+  .evento-card-content {
+    padding: 1.25rem 1.5rem 1.75rem;
+    margin-top: -1.5rem;
+  }
+
+  .evento-card-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .evento-card-excerpt {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .evento-card-date {
+    top: 0.75rem;
+    left: 0.75rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .evento-card-date span {
+    font-size: 0.65rem;
+  }
+
+  /* Modal Responsivo */
+  .evento-modal-overlay {
+    padding: 1rem;
+  }
+
+  .evento-modal {
+    max-height: 95vh;
+  }
+
+  .evento-modal-image {
+    height: 220px;
+  }
+
+  .evento-modal-content {
+    padding: 1.5rem;
+    margin-top: -2rem;
+  }
+
+  .evento-modal-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .evento-modal-desc {
+    font-size: 0.95rem;
+  }
+
+  .evento-modal-info {
+    padding: 1rem;
+  }
+
+  .evento-modal-whatsapp {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .evento-card-image {
+    height: 160px;
+  }
+
+  .evento-card-content {
+    padding: 1rem 1.25rem 1.5rem;
+    margin-top: -1.25rem;
+  }
+
+  .evento-card-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .evento-card-excerpt {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .evento-card-btn {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.85rem;
+  }
+
+  .evento-card::after {
+    left: 1.25rem;
+    right: 1.25rem;
+  }
+
+  /* Modal Responsivo */
+  .evento-modal-overlay {
+    padding: 0.5rem;
+  }
+
+  .evento-modal-image {
+    height: 180px;
+  }
+
+  .evento-modal-close {
+    width: 36px;
+    height: 36px;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .evento-modal-close svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .evento-modal-content {
+    padding: 1.25rem;
+    margin-top: -1.5rem;
+  }
+
+  .evento-modal-date {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .evento-modal-date svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .evento-modal-date span {
+    font-size: 0.75rem;
+  }
+
+  .evento-modal-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .evento-modal-desc {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .evento-modal-info {
+    padding: 0.85rem;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .evento-modal-info-item svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .evento-modal-info-item span {
+    font-size: 0.8rem;
+  }
+
+  .evento-modal-whatsapp {
+    font-size: 0.8rem;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .evento-modal-whatsapp svg {
+    width: 20px;
+    height: 20px;
+  }
+}

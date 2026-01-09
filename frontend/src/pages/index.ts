@@ -1,0 +1,9 @@
+export { default as Home } from './Home/Home';
+export { default as Atrativos } from './Atrativos/Atrativos';
+export { default as Visite } from './Visite/Visite';
+export { default as FeCultura } from './FeCultura/FeCultura';
+export { default as Bandeira } from './Bandeira/Bandeira';
+export { default as Eventos } from './Eventos/Eventos';
+export { default as CirculoPiaga } from './CirculoPiaga/CirculoPiaga';
+export { default as Apoie } from './Apoie/Apoie';
+export { default as MontePiaga } from './MontePiaga/MontePiaga';

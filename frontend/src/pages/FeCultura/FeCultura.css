@@ -1,0 +1,783 @@
+/* =============================================
+   VILA PAGÃ - FÉ & CULTURA
+   Estilo clássico e místico
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+.fe-cultura-page {
+  --gold: #d4af37;
+  --gold-hover: #e6c54a;
+  --green: #2e8b57;
+  --cream: #f5f5dc;
+  --text: #e8e8d0;
+  --text-muted: #a8a890;
+  --dark: #0a0a08;
+  --dark-alt: #141410;
+
+  font-family: 'Lora', Georgia, serif;
+  background: var(--dark);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.fe-cultura-page .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+
+.fe-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+}
+
+.fe-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(10,10,8,0.6), rgba(10,10,8,0.9)),
+    url('/images/fe&cultura.jpeg') center/cover no-repeat;
+}
+
+.fe-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.fe-hero-tag {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.fe-hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing: 0.1em;
+  margin: 0 0 1.5rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+.fe-hero p {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* =============================================
+   SEÇÕES
+   ============================================= */
+
+.fe-section {
+  padding: 5rem 0;
+}
+
+.fe-section-alt {
+  background: var(--dark-alt);
+}
+
+.fe-section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.fe-section-header span {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.fe-section-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: var(--cream);
+  margin: 0;
+}
+
+.fe-intro-text {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.fe-intro-text strong {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* =============================================
+   BLOCO DE INTRODUÇÃO
+   ============================================= */
+
+.fe-intro-block {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fe-intro-block .fe-lead {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--cream);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.fe-intro-block p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.fe-intro-block p:last-child {
+  margin-bottom: 0;
+}
+
+.fe-intro-block strong {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* =============================================
+   CALENDÁRIO
+   ============================================= */
+
+.fe-calendario {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: rgba(212, 175, 55, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.fe-calendario-icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.05) 100%);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  color: var(--gold);
+}
+
+.fe-calendario-icon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.fe-calendario-content h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--gold);
+  margin: 0 0 1rem;
+}
+
+.fe-calendario-content p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+}
+
+.fe-calendario-content p:last-child {
+  margin-bottom: 0;
+}
+
+.fe-calendario-content strong {
+  color: var(--cream);
+  font-weight: 500;
+}
+
+/* =============================================
+   OFERTAS (TURISMO RELIGIOSO)
+   ============================================= */
+
+.fe-offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+.fe-offering {
+  text-align: center;
+  padding: 2rem 1.25rem;
+  background: var(--dark-alt);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  transition: all 0.3s ease;
+}
+
+.fe-offering:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: translateY(-5px);
+}
+
+.fe-offering-icon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+  border: 2px solid rgba(212, 175, 55, 0.25);
+  color: var(--gold);
+}
+
+.fe-offering-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.fe-offering h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--gold);
+  margin: 0 0 0.75rem;
+}
+
+.fe-offering p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* =============================================
+   TURISMO CULTURAL
+   ============================================= */
+
+.fe-cultural-content {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.fe-cultural-content p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.fe-cultural-content p:last-child {
+  margin-bottom: 0;
+}
+
+.fe-cultural-content strong {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.fe-cultural-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.fe-cultural-feature {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: var(--dark);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  transition: all 0.3s ease;
+}
+
+.fe-cultural-feature:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.fe-cultural-number {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.fe-cultural-feature p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* =============================================
+   AMBIENTE
+   ============================================= */
+
+.fe-ambiente {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.fe-ambiente-content {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.fe-ambiente-content h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--cream);
+  margin: 0 0 1.5rem;
+}
+
+.fe-ambiente-content p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fe-ambiente-content p:last-child {
+  margin-bottom: 0;
+}
+
+.fe-ambiente-content strong {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.fe-ambiente-badges {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.fe-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(212, 175, 55, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  transition: all 0.3s ease;
+}
+
+.fe-badge:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.fe-badge svg {
+  width: 32px;
+  height: 32px;
+  color: var(--gold);
+}
+
+.fe-badge span {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--cream);
+  text-align: center;
+}
+
+/* =============================================
+   CTA
+   ============================================= */
+
+.fe-cta {
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, var(--dark-alt), var(--dark));
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.fe-cta-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.fe-cta-phrase {
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.8;
+  margin: 0 0 2.5rem;
+}
+
+.fe-cta-phrase strong {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.fe-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 1rem 2rem;
+  background: var(--gold);
+  color: var(--dark);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.fe-cta-btn:hover {
+  background: var(--gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.fe-cta-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* =============================================
+   RESPONSIVO
+   ============================================= */
+
+@media (max-width: 1100px) {
+  .fe-offerings-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .fe-hero {
+    min-height: 50vh;
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  .fe-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .fe-calendario {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .fe-calendario-icon {
+    margin: 0 auto;
+  }
+
+  .fe-offerings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fe-cultural-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fe-ambiente-badges {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .fe-cultura-page .container {
+    padding: 0 1.5rem;
+  }
+
+  .fe-hero {
+    min-height: 45vh;
+    padding: 6rem 1rem 2.5rem;
+  }
+
+  .fe-hero-tag {
+    font-size: 0.65rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .fe-hero h1 {
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+  }
+
+  .fe-hero p {
+    font-size: 1rem;
+  }
+
+  .fe-section {
+    padding: 3.5rem 0;
+  }
+
+  .fe-section-header h2 {
+    font-size: 1.85rem;
+  }
+
+  .fe-intro-block .fe-lead {
+    font-size: 1.15rem;
+  }
+
+  .fe-intro-block p {
+    font-size: 1rem;
+  }
+
+  .fe-calendario {
+    padding: 1.5rem;
+  }
+
+  .fe-calendario-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .fe-calendario-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .fe-calendario-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .fe-calendario-content p {
+    font-size: 1rem;
+  }
+
+  .fe-offerings-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .fe-offering {
+    padding: 1.5rem;
+  }
+
+  .fe-cultural-features {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .fe-cultural-feature {
+    padding: 1.5rem 1rem;
+  }
+
+  .fe-cultural-number {
+    font-size: 1.5rem;
+  }
+
+  .fe-ambiente-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .fe-ambiente-badges {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .fe-badge {
+    padding: 1.25rem;
+  }
+
+  .fe-badge svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .fe-badge span {
+    font-size: 0.8rem;
+  }
+
+  .fe-cta {
+    padding: 3.5rem 0;
+  }
+
+  .fe-cta-phrase {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .fe-hero {
+    min-height: auto;
+    padding: 5.5rem 1rem 2rem;
+  }
+
+  .fe-hero-tag {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+  }
+
+  .fe-hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .fe-hero p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .fe-section {
+    padding: 2.5rem 0;
+  }
+
+  .fe-section-header span {
+    font-size: 0.65rem;
+  }
+
+  .fe-section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .fe-intro-block .fe-lead {
+    font-size: 1.05rem;
+  }
+
+  .fe-intro-block p {
+    font-size: 0.9rem;
+  }
+
+  .fe-calendario {
+    padding: 1.25rem;
+  }
+
+  .fe-calendario-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .fe-calendario-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .fe-calendario-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .fe-calendario-content p {
+    font-size: 0.9rem;
+  }
+
+  .fe-offering {
+    padding: 1.25rem;
+  }
+
+  .fe-offering-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 1rem;
+  }
+
+  .fe-offering-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .fe-offering h3 {
+    font-size: 0.95rem;
+  }
+
+  .fe-offering p {
+    font-size: 0.85rem;
+  }
+
+  .fe-cultural-content p {
+    font-size: 0.95rem;
+  }
+
+  .fe-cultural-feature {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .fe-cultural-number {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .fe-cultural-feature p {
+    font-size: 0.85rem;
+  }
+
+  .fe-ambiente-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .fe-ambiente-content p {
+    font-size: 0.9rem;
+  }
+
+  .fe-ambiente-badges {
+    gap: 0.75rem;
+  }
+
+  .fe-badge {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .fe-badge svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .fe-badge span {
+    font-size: 0.75rem;
+  }
+
+  .fe-cta {
+    padding: 2.5rem 0;
+  }
+
+  .fe-cta-phrase {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .fe-cta-btn {
+    font-size: 0.85rem;
+    padding: 0.9rem 1.5rem;
+    width: 100%;
+    justify-content: center;
+    max-width: 280px;
+  }
+}

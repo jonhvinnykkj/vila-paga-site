@@ -1,0 +1,591 @@
+/* =============================================
+   VILA PAGÃ - ATRATIVOS
+   Estilo clássico e místico
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+.atrativos-page {
+  --gold: #d4af37;
+  --gold-hover: #e6c54a;
+  --green: #2e8b57;
+  --cream: #f5f5dc;
+  --text: #e8e8d0;
+  --text-muted: #a8a890;
+  --dark: #0a0a08;
+  --dark-alt: #141410;
+
+  font-family: 'Lora', Georgia, serif;
+  background: var(--dark);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.atrativos-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+
+.atrativos-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+}
+
+.atrativos-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(10,10,8,0.6), rgba(10,10,8,0.9)),
+    url('/images/vila-turistica.jpeg') center/cover no-repeat;
+}
+
+.atrativos-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.atrativos-hero-tag {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.atrativos-hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing: 0.1em;
+  margin: 0 0 1.5rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+.atrativos-hero p {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* =============================================
+   INTRODUÇÃO
+   ============================================= */
+
+.atrativos-intro {
+  padding: 4rem 0;
+  background: var(--dark-alt);
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.atrativos-intro-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.atrativos-intro-icon {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.05) 100%);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  color: var(--gold);
+}
+
+.atrativos-intro-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.atrativos-intro-content p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.atrativos-intro-content strong {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* =============================================
+   SEÇÃO DE ATRATIVOS
+   ============================================= */
+
+.atrativos-content {
+  padding: 5rem 0;
+}
+
+.atrativos-section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.atrativos-section-header span {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.atrativos-section-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: var(--cream);
+  margin: 0;
+}
+
+/* Filtros */
+.atrativos-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.atrativos-filter-btn {
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--text-muted);
+  padding: 0.6rem 1.25rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.atrativos-filter-btn:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+  color: var(--cream);
+}
+
+.atrativos-filter-btn.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--dark);
+}
+
+/* Loading */
+.atrativos-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 4rem 0;
+}
+
+.atrativos-loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(212, 175, 55, 0.2);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.atrativos-loading p {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Empty State */
+.atrativos-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.atrativos-empty-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  opacity: 0.5;
+}
+
+.atrativos-empty-icon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.atrativos-empty p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Grid */
+.atrativos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* =============================================
+   DESTAQUES (NÚMEROS)
+   ============================================= */
+
+.atrativos-highlights {
+  padding: 4rem 0;
+  background: var(--dark-alt);
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.atrativos-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.atrativos-highlight {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.atrativos-highlight-number {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.atrativos-highlight span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* =============================================
+   CTA
+   ============================================= */
+
+.atrativos-cta {
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, var(--dark), var(--dark-alt));
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.atrativos-cta-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.atrativos-cta h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--cream);
+  margin: 0 0 1rem;
+}
+
+.atrativos-cta p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0 0 2rem;
+}
+
+.atrativos-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 1rem 2rem;
+  background: var(--gold);
+  color: var(--dark);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.atrativos-cta-btn:hover {
+  background: var(--gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.atrativos-cta-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* =============================================
+   RESPONSIVO
+   ============================================= */
+
+@media (max-width: 900px) {
+  .atrativos-hero {
+    min-height: 50vh;
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  .atrativos-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .atrativos-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .atrativos-highlight {
+    padding: 1.5rem 1rem;
+  }
+
+  .atrativos-highlight-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .atrativos-page .container {
+    padding: 0 1.5rem;
+  }
+
+  .atrativos-hero {
+    min-height: 45vh;
+    padding: 6rem 1rem 2.5rem;
+  }
+
+  .atrativos-hero-tag {
+    font-size: 0.65rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .atrativos-hero h1 {
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+  }
+
+  .atrativos-hero p {
+    font-size: 1rem;
+  }
+
+  .atrativos-intro {
+    padding: 3rem 0;
+  }
+
+  .atrativos-intro-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .atrativos-intro-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .atrativos-intro-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .atrativos-intro-content p {
+    font-size: 1rem;
+  }
+
+  .atrativos-content {
+    padding: 3.5rem 0;
+  }
+
+  .atrativos-section-header {
+    margin-bottom: 2rem;
+  }
+
+  .atrativos-section-header h2 {
+    font-size: 1.85rem;
+  }
+
+  .atrativos-filters {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .atrativos-filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .atrativos-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .atrativos-highlights {
+    padding: 3rem 0;
+  }
+
+  .atrativos-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .atrativos-highlight {
+    padding: 1rem;
+  }
+
+  .atrativos-highlight-number {
+    font-size: 1.75rem;
+  }
+
+  .atrativos-highlight span {
+    font-size: 0.8rem;
+  }
+
+  .atrativos-cta {
+    padding: 3.5rem 0;
+  }
+
+  .atrativos-cta h2 {
+    font-size: 1.6rem;
+  }
+
+  .atrativos-cta p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .atrativos-hero {
+    min-height: auto;
+    padding: 5.5rem 1rem 2rem;
+  }
+
+  .atrativos-hero-tag {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+  }
+
+  .atrativos-hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .atrativos-hero p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .atrativos-intro {
+    padding: 2.5rem 0;
+  }
+
+  .atrativos-intro-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .atrativos-intro-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .atrativos-intro-content p {
+    font-size: 0.9rem;
+  }
+
+  .atrativos-content {
+    padding: 2.5rem 0;
+  }
+
+  .atrativos-section-header span {
+    font-size: 0.65rem;
+  }
+
+  .atrativos-section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .atrativos-filters {
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .atrativos-filter-btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.7rem;
+  }
+
+  .atrativos-highlights {
+    padding: 2.5rem 0;
+  }
+
+  .atrativos-highlight-number {
+    font-size: 1.5rem;
+  }
+
+  .atrativos-highlight span {
+    font-size: 0.75rem;
+  }
+
+  .atrativos-cta {
+    padding: 2.5rem 0;
+  }
+
+  .atrativos-cta h2 {
+    font-size: 1.35rem;
+  }
+
+  .atrativos-cta p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .atrativos-cta-btn {
+    font-size: 0.85rem;
+    padding: 0.9rem 1.5rem;
+    width: 100%;
+    justify-content: center;
+    max-width: 280px;
+  }
+}
