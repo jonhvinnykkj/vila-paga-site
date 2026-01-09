@@ -1,27 +1,103 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { AtrativoCard } from '../../components';
 import type { Atrativo } from '../../types';
 import './Atrativos.css';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+// Dados dos atrativos
+const atrativosData: Atrativo[] = [
+  {
+    id: 'templo-piaga',
+    images: ['/images/templo-piaga.jpeg'],
+    category: 'Templo',
+    title: 'Templo Piaga',
+    excerpt: 'Formato octogonal que acolhe as grandes celebrações do Paganismo Brasileiro desde 2017.',
+    text: 'Inaugurado em maio de 2017, seu formato octogonal acolhe as grandes celebrações do Paganismo Brasileiro. Arquitetura simbólica, cantos e rituais conduzem a uma experiência de reflexão, força ancestral e comunhão.'
+  },
+  {
+    id: 'templo-almas',
+    images: ['/images/templo-almas.jpeg'],
+    category: 'Templo',
+    title: 'Templo Piaga das Almas',
+    excerpt: 'Dedicado à Linha das Almas, reúne mais de 30 estatuetas de almas benditas catalogadas.',
+    text: 'Dedicado à Linha das Almas, reúne mais de 30 estatuetas de almas benditas catalogadas pelo Piauí. É um espaço de memória e intercessão, onde a gratidão e a esperança se transformam em devoção viva.'
+  },
+  {
+    id: 'biblioteca',
+    images: ['/images/biblioteca.jpeg', '/images/biblioteca-interno.jpeg'],
+    category: 'Conhecimento',
+    title: 'Biblioteca',
+    excerpt: 'Acervo valioso sobre folclore, paganismo, religiões, botânica e mitologias.',
+    text: 'Inaugurada em setembro de 2024, guarda um acervo valioso sobre folclore, paganismo, religiões, botânica, mitologias e artes populares, além de documentos da própria Vila. Um refúgio para leitores e pesquisadores, onde conhecimento e tradição caminham lado a lado.'
+  },
+  {
+    id: 'galeria-encantados',
+    images: ['/images/galeria-encantados.jpeg'],
+    category: 'Espaço Sagrado',
+    title: 'Galeria dos Encantados',
+    excerpt: 'Dezenas de esculturas de Encantados e divindades autóctones do culto piaga.',
+    text: 'Atrás do Templo Piaga, um percurso com dezenas de esculturas de Encantados e divindades autóctones do culto piaga. Arte e devoção se encontram para revelar, em pedra e cor, a cosmovisão da Vila.'
+  },
+  {
+    id: 'casa-salamandra',
+    images: ['/images/casa-salamandra.jpeg', '/images/casa-salamandra2.jpeg'],
+    category: 'Estrutura',
+    title: 'Casa Salamandra',
+    excerpt: 'Quarto com cama, ventilador e armadores para rede, banheiro no corredor.',
+    text: 'É onde ficam os dormitórios que abrigam os visitantes que vêm para a Vila. Quarto com cama, ventilador e armadores para rede, banheiro no corredor. Os corredores da casa são repletos de arte piaga.'
+  },
+  {
+    id: 'bosques',
+    images: ['/images/bosque.jpeg', '/images/bosque2.jpeg', '/images/bosque-nordico.jpeg'],
+    category: 'Natureza',
+    title: '15 Bosques Temáticos',
+    excerpt: 'Bosques dedicados às linhas da Corrente Colona ao longo da Via Aurora.',
+    text: 'São 15 bosques temáticos ao longo da Via Aurora, dedicados às linhas da Corrente Colona: Ameríndio, Africano, Hindu, Egípcio, Celta, Oriente Médio, Extremo Oriente, Nórdico, Eslavo, Helênico, Romano, Ibérico, Caribe, Inuit e Pacífico. Cada bosque é um portal simbólico, com paisagismo e espaços de contemplação que celebram a pluralidade do sagrado.'
+  },
+  {
+    id: 'bosque-suely',
+    images: ['/images/amazonico suely cals.jpeg'],
+    category: 'Natureza',
+    title: 'Bosque Amazônico Suely Cals',
+    excerpt: 'Homenagem à escritora e sacerdotisa, com espécies amazônicas e divindades brasileiras.',
+    text: 'Homenagem à escritora e sacerdotisa Suely Cals (in memoriam), reúne espécies amazônicas e representações de divindades brasileiras. Um abrigo de sombra e encantamento, onde a natureza fala com voz de mulher e de floresta.'
+  },
+  {
+    id: 'pracinha',
+    images: ['/images/praca-baba-tayando.jpeg', '/images/baba-tayandó.jpeg'],
+    category: 'Natureza',
+    title: 'Pracinha Babá Tayandó',
+    excerpt: 'Nossa "farmácia viva" com plantas aromáticas e sagradas.',
+    text: 'Nossa "farmácia viva": canteiros de plantas aromáticas e sagradas que preservam saberes de cura e bem-viver. Um pequeno oásis de aromas, cuidado e aprendizado comunitário.'
+  },
+  {
+    id: 'sacrarios',
+    images: ['/images/sacrario-flora.jpeg', '/images/sacrario-netuno.jpeg', '/images/sacrario-robigus.jpeg'],
+    category: 'Espaço Sagrado',
+    title: 'Sacrários',
+    excerpt: 'Altares dedicados a Flora, Netuno, Pomona, Robigus e Janus.',
+    text: 'Ao longo da Vila, altares dedicados a Flora, Netuno, Pomona, Robigus e Janus abençoam caminhos e travessias. São singelos pontos sagrados que convidam a uma pausa, uma prece, um gesto de oferenda.'
+  },
+  {
+    id: 'cantina',
+    images: ['/images/cantina.jpeg', '/images/cantina2.jpeg'],
+    category: 'Estrutura',
+    title: 'Cantina Fornax',
+    excerpt: 'Gastronomia regional com tempero mágico e caseiro.',
+    text: 'Espaço gastronômico da Vila Pagã, onde é possível degustar pratos regionais com um tempero mágico e caseiro. Funciona aos sábados, domingos e feriados.'
+  },
+  {
+    id: 'loja',
+    images: ['/images/loja1.jpeg', '/images/loja2.jpeg'],
+    category: 'Estrutura',
+    title: 'Loja',
+    excerpt: 'Artefatos, livros, peças rituais e suvenires da Vila Pagã.',
+    text: 'Aqui o visitante encontra a lembrança física da Vila e apoia a economia local: artefatos, livros, peças rituais e suvenires. Cada item carrega um pedaço da nossa história e ajuda a manter templos, bosques e projetos culturais.'
+  }
+];
 
 const Atrativos = () => {
-  const [atrativos, setAtrativos] = useState<Atrativo[]>([]);
-  const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('todos');
-
-  useEffect(() => {
-    fetch(`${API_URL}/api/atrativos`)
-      .then((res) => res.json())
-      .then((data) => {
-        setAtrativos(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Erro ao carregar atrativos:', error);
-        setLoading(false);
-      });
-  }, []);
+  const atrativos = atrativosData;
 
   const categories = ['todos', ...new Set(atrativos.map((a) => a.category))];
 
@@ -85,12 +161,7 @@ const Atrativos = () => {
             ))}
           </div>
 
-          {loading ? (
-            <div className="atrativos-loading">
-              <div className="atrativos-loading-spinner"></div>
-              <p>Carregando atrativos...</p>
-            </div>
-          ) : filteredAtrativos.length > 0 ? (
+          {filteredAtrativos.length > 0 ? (
             <div className="atrativos-grid">
               {filteredAtrativos.map((atrativo) => (
                 <AtrativoCard key={atrativo.id} atrativo={atrativo} />
