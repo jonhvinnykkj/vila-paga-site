@@ -192,7 +192,7 @@ const Home = () => {
 
             {/* Bandeira central */}
             <div className="bandeira-center">
-              <img src="/images/bandeira.jpeg" alt="Bandeira da Vila Pagã" loading="lazy" />
+              <img src="/images/bandeira.webp" alt="Bandeira da Vila Pagã" loading="lazy" />
             </div>
 
             {/* Símbolos inferiores */}

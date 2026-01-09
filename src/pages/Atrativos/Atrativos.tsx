@@ -7,7 +7,7 @@ import './Atrativos.css';
 const atrativosData: Atrativo[] = [
   {
     id: 'templo-piaga',
-    images: ['/images/templo-piaga.jpeg'],
+    images: ['/images/templo-piaga.webp'],
     category: 'Templo',
     title: 'Templo Piaga',
     excerpt: 'Formato octogonal que acolhe as grandes celebrações do Paganismo Brasileiro desde 2017.',
@@ -15,7 +15,7 @@ const atrativosData: Atrativo[] = [
   },
   {
     id: 'templo-almas',
-    images: ['/images/templo-almas.jpeg'],
+    images: ['/images/templo-almas.webp'],
     category: 'Templo',
     title: 'Templo Piaga das Almas',
     excerpt: 'Dedicado à Linha das Almas, reúne mais de 30 estatuetas de almas benditas catalogadas.',
@@ -23,7 +23,7 @@ const atrativosData: Atrativo[] = [
   },
   {
     id: 'biblioteca',
-    images: ['/images/biblioteca.jpeg', '/images/biblioteca-interno.jpeg'],
+    images: ['/images/biblioteca.webp', '/images/biblioteca-interno.webp'],
     category: 'Conhecimento',
     title: 'Biblioteca',
     excerpt: 'Acervo valioso sobre folclore, paganismo, religiões, botânica e mitologias.',
@@ -31,7 +31,7 @@ const atrativosData: Atrativo[] = [
   },
   {
     id: 'galeria-encantados',
-    images: ['/images/galeria-encantados.jpeg'],
+    images: ['/images/galeria-encantados.webp'],
     category: 'Espaço Sagrado',
     title: 'Galeria dos Encantados',
     excerpt: 'Dezenas de esculturas de Encantados e divindades autóctones do culto piaga.',
@@ -39,7 +39,7 @@ const atrativosData: Atrativo[] = [
   },
   {
     id: 'casa-salamandra',
-    images: ['/images/casa-salamandra.jpeg', '/images/casa-salamandra2.jpeg'],
+    images: ['/images/casa-salamandra.webp', '/images/casa-salamandra2.webp'],
     category: 'Estrutura',
     title: 'Casa Salamandra',
     excerpt: 'Quarto com cama, ventilador e armadores para rede, banheiro no corredor.',
@@ -47,7 +47,7 @@ const atrativosData: Atrativo[] = [
   },
   {
     id: 'bosques',
-    images: ['/images/bosque.jpeg', '/images/bosque2.jpeg', '/images/bosque-nordico.jpeg'],
+    images: ['/images/bosque.webp', '/images/bosque2.webp', '/images/bosque-nordico.webp'],
     category: 'Natureza',
     title: '15 Bosques Temáticos',
     excerpt: 'Bosques dedicados às linhas da Corrente Colona ao longo da Via Aurora.',
@@ -55,7 +55,7 @@ const atrativosData: Atrativo[] = [
   },
   {
     id: 'bosque-suely',
-    images: ['/images/amazonico suely cals.jpeg'],
+    images: ['/images/amazonico-suely-cals.webp'],
     category: 'Natureza',
     title: 'Bosque Amazônico Suely Cals',
     excerpt: 'Homenagem à escritora e sacerdotisa, com espécies amazônicas e divindades brasileiras.',
@@ -63,7 +63,7 @@ const atrativosData: Atrativo[] = [
   },
   {
     id: 'pracinha',
-    images: ['/images/praca-baba-tayando.jpeg', '/images/baba-tayandó.jpeg'],
+    images: ['/images/praca-baba-tayando.webp', '/images/baba-tayando.webp'],
     category: 'Natureza',
     title: 'Pracinha Babá Tayandó',
     excerpt: 'Nossa "farmácia viva" com plantas aromáticas e sagradas.',
@@ -71,7 +71,7 @@ const atrativosData: Atrativo[] = [
   },
   {
     id: 'sacrarios',
-    images: ['/images/sacrario-flora.jpeg', '/images/sacrario-netuno.jpeg', '/images/sacrario-robigus.jpeg'],
+    images: ['/images/sacrario-flora.webp', '/images/sacrario-netuno.webp', '/images/sacrario-robigus.webp'],
     category: 'Espaço Sagrado',
     title: 'Sacrários',
     excerpt: 'Altares dedicados a Flora, Netuno, Pomona, Robigus e Janus.',
@@ -79,7 +79,7 @@ const atrativosData: Atrativo[] = [
   },
   {
     id: 'cantina',
-    images: ['/images/cantina.jpeg', '/images/cantina2.jpeg'],
+    images: ['/images/cantina.webp', '/images/cantina2.webp'],
     category: 'Estrutura',
     title: 'Cantina Fornax',
     excerpt: 'Gastronomia regional com tempero mágico e caseiro.',
@@ -87,7 +87,7 @@ const atrativosData: Atrativo[] = [
   },
   {
     id: 'loja',
-    images: ['/images/loja1.jpeg', '/images/loja2.jpeg'],
+    images: ['/images/loja1.webp', '/images/loja2.webp'],
     category: 'Estrutura',
     title: 'Loja',
     excerpt: 'Artefatos, livros, peças rituais e suvenires da Vila Pagã.',
