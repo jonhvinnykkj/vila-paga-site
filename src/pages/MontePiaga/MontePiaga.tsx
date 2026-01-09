@@ -8,7 +8,7 @@ const MontePiaga = () => {
         <div className="monte-hero-bg"></div>
         <div className="monte-hero-content">
           <div className="monte-hero-logo">
-            <img src="/images/loetamento.jpeg" alt="Monte Piaga - Loteamento" />
+            <img src="/images/loetamento.webp" alt="Monte Piaga - Loteamento" />
           </div>
           <span className="monte-hero-tag">Habitar</span>
           <h1>Monte Piaga</h1>

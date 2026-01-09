@@ -12,7 +12,7 @@ const Bandeira = () => {
         <div className="container">
           <div className="bandeira-hero">
             <img
-              src="/images/Bandeira Vila Pagã-opt.png"
+              src="/images/bandeira.webp"
               alt="Bandeira da Vila Pagã"
               className="bandeira-image"
             />

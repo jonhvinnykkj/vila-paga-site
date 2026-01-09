@@ -304,7 +304,7 @@ const CirculoPiaga = () => {
 
             <div className="lema-box lema-box-with-image">
               <div className="lema-image">
-                <img src="/images/circulo-piaga.jpeg" alt="Sacerdotes do Círculo Piaga" />
+                <img src="/images/circulo-piaga.webp" alt="Sacerdotes do Círculo Piaga" />
                 <span className="lema-image-caption">Sacerdotes do Círculo Piaga</span>
               </div>
               <div className="lema-content">
@@ -432,7 +432,7 @@ const CirculoPiaga = () => {
           <div className="fundador-content">
             <div className="fundador-profile">
               <div className="fundador-photo">
-                <img src="/images/rn-fundador.png" alt="Dom Rafael Nolêto" />
+                <img src="/images/rn-fundador.webp" alt="Dom Rafael Nolêto" />
               </div>
               <div className="fundador-bio">
                 <blockquote className="fundador-lema">
