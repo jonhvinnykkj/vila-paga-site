@@ -3,7 +3,7 @@
    Layout limpo e clássico
    ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+/* Fontes carregadas no index.html para evitar bloqueio de renderização */
 
 .home {
   --gold: #d4af37;
