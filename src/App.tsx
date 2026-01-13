@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header, Footer, ScrollToTop } from './components';
 import { Home, Atrativos, Visite, FeCultura, Bandeira, Eventos, CirculoPiaga, Apoie, MontePiaga } from './pages';
 import './App.css';
